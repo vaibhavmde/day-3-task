@@ -1,0 +1,57 @@
+Question 1
+For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+Answer
+
+|>for in
+   var employee = {name:"Vaibhav",EID:7845212,Dept:"FSD",Phone:7020071805,Address:"Nashik"};   // This was done using for in
+   for (let key in employee)
+    {
+      console.log(key + ": "+ employee[key]);
+    }
+    
+|>for each 
+  var employee = [{name:"Vaibhav",EID:7845212,Dept:"FSD",Phone:7020071805,Address:"Nashik"}];
+  employee.forEach((item) => {
+  console.log('Name: ' + item.name);
+  console.log('Employee ID: ' + item.EID);
+  console.log('Department: ' + item.Dept);
+  console.log('Phone: ' + item.Phone)
+  console.log('Address: ' + item.Address);
+});
+
+Question 2
+Create your own resume data in JSON format
+
+Answer
+
+|>myResume.JSON-->
+
+{
+ personalDetails: {
+     name: "Vaibhav Davande",
+     age: 24,
+     email: "vaibhavmde@gmail.com",
+     phone: "(+91) - 7020071805",
+     location: [
+       "address: Sai vishwa aapt", 
+       " postalCode: 422101", 
+       " city: Nashik", 
+       " state: Maharashtra", 
+       " country: India"
+    ]},
+   education: {
+       institution: "Sandip Institute of Engineering and Mangement",
+       degreeName: "Bachelor's of Engineering",
+       degreeBranch: "Computer Engineering",
+       duration: "2015-2021",
+       cgpa: 7.22
+    },
+   skills: {
+       name: "Programming Languages",
+       level: "Intermediate",
+       languages: [
+        "C","C++","Python","Javascript"
+      ]
+    }
+}
