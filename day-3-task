@@ -1,25 +1,52 @@
-Question 1
+/* Question 1
 For the given JSON iterate over all for loops (for, for in, for of, forEach)
 
-Answer
+Answer/code */
 
-|>for in
-   var employee = {name:"Vaibhav",EID:7845212,Dept:"FSD",Phone:7020071805,Address:"Nashik"};   // This was done using for in
-   for (let key in employee)
-    {
-      console.log(key + ": "+ employee[key]);
-    }
-    
-|>for each 
-  var employee = [{name:"Vaibhav",EID:7845212,Dept:"FSD",Phone:7020071805,Address:"Nashik"}];
-  employee.forEach((item) => {
-  console.log('Name: ' + item.name);
-  console.log('Employee ID: ' + item.EID);
-  console.log('Department: ' + item.Dept);
-  console.log('Phone: ' + item.Phone)
-  console.log('Address: ' + item.Address);
-});
+var resume=[{
+Firstname:"vaibhav",
+Lastname:"Davande"
+},{
+Education:"Graduate",
+Institute:"Sandip Institute of Engineering and Management",
+University:"SPPU",
+Branch:"Computer Science"
+},{
+Skills:["c","c++","java"],
+level:"Intermidiate"
+},{
+interest:["riding","cycling","adventure"]
+}];
 
+for(var i=0;i<resume.length;i++){   //using normal for
+  console.log(resume[i]);
+}
+for( var values of resume){         //using for of
+ console.log(values);
+}
+
+for(var i in resume){             //using for in
+ console.log(resume[i]);
+} 
+
+ resume.forEach((element) => {console.log(element);}); //using for each
+
+//output
+{ Firstname: 'vaibhav', Lastname: 'Davande' }
+
+{ Education: 'Graduate',
+  Institute: 'Sandip Institute of Engineering and Management',
+  University: 'SPPU',
+  Branch: 'Computer Science' }
+  
+{ Skills: [ 'c', 'c++', 'java' ], level: 'Intermidiate' }
+ 
+{ interest: [ 'riding', 'cycling', 'adventure' ] }
+ 
+/* Question 2
+Create your own resume data in JSON format
+
+Answer */
 Question 2
 Create your own resume data in JSON format
 
@@ -27,31 +54,43 @@ Answer
 
 |>myResume.JSON-->
 
-{
- personalDetails: {
-     name: "Vaibhav Davande",
-     age: 24,
-     email: "vaibhavmde@gmail.com",
-     phone: "(+91) - 7020071805",
-     location: [
-       "address: Sai vishwa aapt", 
-       " postalCode: 422101", 
-       " city: Nashik", 
-       " state: Maharashtra", 
-       " country: India"
-    ]},
-   education: {
-       institution: "Sandip Institute of Engineering and Mangement",
-       degreeName: "Bachelor's of Engineering",
-       degreeBranch: "Computer Engineering",
-       duration: "2015-2021",
-       cgpa: 7.22
-    },
-   skills: {
-       name: "Programming Languages",
-       level: "Intermediate",
-       languages: [
-        "C","C++","Python","Javascript"
-      ]
-    }
-}
+let resume = [{
+    "basics": {
+      "name": "Vaibhav Davande",
+      "email": "vaibhavmde@gmail.com",
+      "phone": "7020071805",
+      "degree": "BE. in CS",
+      "location": {
+        "address": "A wing, flat no 102,Sai vishwa aapt",
+        "postalCode": "422101",
+        "city": "Nashik",
+        "countryCode": "India",
+        "region": "Maharashtra"
+      }},
+    "education": [
+      {
+        "institution": "Sandip INstitute of Engineering and Management",
+        "area": "Computer Science",
+        "startDate": "2015-06-22",
+        "endDate": "2021-07-31",
+        "gpa": "7.22",
+      }
+    ],
+    "skills": [
+      {
+        "name": ["C","C++","Java","Python","Sql","MongoDb"],
+        "level": "Intermidiate",
+      }
+    ],
+    "languages": [
+      {
+        "language": ["English","Hindi","Marathi"],
+        "fluency": "Good"
+      }
+    ],
+    "interests": [
+      {
+        "name": ["Coding","Technology","Gadgets","Cycling"],
+      }
+    ],
+}];
