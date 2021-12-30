@@ -46,13 +46,8 @@ for(var i in resume){             //using for in
 /* Question 2
 Create your own resume data in JSON format
 
-Answer */
-Question 2
-Create your own resume data in JSON format
-
-Answer
-
-|>myResume.JSON-->
+Answer 
+|>myResume.JSON-->  */
 
 let resume = [{
     "basics": {
